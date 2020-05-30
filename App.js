@@ -1,12 +1,17 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component, useEffect, useState} from 'react';
+import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
+import {Routing, TabHeader} from "./src/Routing";
+import {Header} from "react-native-elements";
+import AddToBasket from "./src/components/AddToBasket";
+import TopToBasket from "./src/components/TopToBasket";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default function App({navigation}) {
+
+    return (
+      <View style={{flex: 1}}>
+        <Routing/>
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({
